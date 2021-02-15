@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/EventList">
+
+    <fragment
+        android:id="@+id/EventList"
+        android:name="com.utveckla.xdays.EventList"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/event_list">
+        <action
+            android:id="@+id/action_EventList_to_EditEvent"
+            app:destination="@id/EditEvent" />
+    </fragment>
+    <fragment
+        android:id="@+id/EditEvent"
+        android:name="com.utveckla.xdays.EditEvent"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/edit_event">
+        <action
+            android:id="@+id/action_EditEvent_to_EventList"
+            app:destination="@id/EventList" />
+    </fragment>
+</navigation>
